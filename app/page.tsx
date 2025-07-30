@@ -1,145 +1,105 @@
-import {
-  facebookPage,
-  joinUs,
-  support_us,
-  whatsappChannel,
-} from "@/importantLinks";
+import { cn } from "@/utils";
 import Link from "next/link";
-import { FaFacebook } from "react-icons/fa6";
+import BlogCard from "./_components/BlogCard";
+import HeroSection from "./_components/HeroSection";
+import SetupValuesComponent from "./setupvalues/SetupValuesComponent";
 
 export default function Home() {
   return (
-    <article className="max-w-5xl mx-auto px-4 flex flex-col items-center justify-center text-center">
-      {/* قسم العنوان والوصف */}
-      <section id="about" className="mx-auto max-w-screen-md">
-        <h1 className="inline-block px-6 py-2 text-xl font-semibold tracking-wide text-white uppercase rounded-full bg-gradient-to-r from-teal-500 to-teal-700 shadow-teal-300 shadow-md">
-          عَيْنًا سَلْسَبِيلًا
-        </h1>
-        <h2 className="mt-6 text-4xl font-bold text-gray-900 sm:text-5xl">
-          احمي طفلك من الإباحية 🛡️
-        </h2>
-        <p className="mt-4 text-lg text-gray-700 leading-relaxed">
-          نؤمن بأن الحماية من المحتوى الإباحي تبدأ بتوفير بيئة آمنة على
-          الإنترنت. اكتشف كيف يمكنك تأمين جميع أجهزتك بسهولة.
-        </p>
-      </section>
+    <div>
+      {/* Hero Section */}
+      <HeroSection
+        className="bg-home-hero"
+        title="اعطاء ابنك هاتفا، ضمان لتعرضه لموادٍ إباحية!"
+        description="تعرف كيف يشاهد الأطفال أفلاما إباحية عن طريق كتابة حرف خاطئ على محرك البحث"
+        button1={{
+          text: "اقرأ المزيد...",
+          href: "/blog",
+        }}
+        button2={{
+          text: "فعل الحماية",
+          href: "/gen1/setupguide",
+        }}
+      />
 
-      {/* قسم الميزات */}
-      <section id="features" className="pt-6 max-w-screen-md mx-auto">
-        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 text-center md:text-right">
-          {/* ميزة 1 */}
-          <div
-            className="relative p-4 md:p-6 bg-white bg-opacity-80 backdrop-blur-lg shadow-xl rounded-2xl border border-gray-200 transition-all duration-300 
-            hover:shadow-2xl hover:-translate-y-2 hover:bg-opacity-100 before:absolute before:inset-0 before:-z-10 before:bg-gradient-to-br before:from-teal-400 before:to-green-300 before:rounded-2xl before:opacity-20 "
-          >
-            <h3 className="text-xl font-bold text-gray-900 flex items-center justify-center md:justify-start gap-2">
-              حماية شاملة <span>✅</span>
-            </h3>
-            <p className="text-gray-700 mt-2 leading-relaxed">
-              يحميك من المواقع الإباحية والمحتوى الضار.
-            </p>
-          </div>
-
-          {/* ميزة 2 */}
-          <div
-            className="relative p-6 bg-white bg-opacity-80 backdrop-blur-lg shadow-xl rounded-2xl border border-gray-200 transition-all duration-300 
-            hover:shadow-2xl hover:-translate-y-2 hover:bg-opacity-100 before:absolute before:inset-0 before:-z-10 before:bg-gradient-to-br before:from-sky-400 before:to-blue-400 before:rounded-2xl before:opacity-20"
-          >
-            <h3 className="text-xl font-bold text-gray-900 flex items-center justify-center md:justify-start gap-2">
-              سهولة الإعداد <span>⚡</span>
-            </h3>
-            <p className="text-gray-700 mt-2 leading-relaxed">
-              بخطوات بسيطة يمكنك تأمين جميع أجهزتك.
-            </p>
-          </div>
+      <div className="bg-white   py-24">
+        <div className="flex flex-col items-center justify-center gap-y-[30px] max-w-5xl mx-auto px-4">
+          <h2 className="text-text font-bold text-5xl">أهم مقالاتنا</h2>
+          <p className="text-text text-2xl font-bold text-center">
+            مقال توعوي للأباء و الأمهات عن ما وصلت إليه الإباحية في هذا الزمن، و
+            آخر يساعد الشباب على التعافي بإذن الله
+          </p>
         </div>
-      </section>
-
-      {/* زر البدء */}
-      <section
-        id="start"
-        className="max-w-2xl w-full flex justify-center pt-6 "
-      >
-        <Link
-          href="/gen1/setupguide"
-          className="w-full px-8 py-4 bg-teal-600 text-white text-xl font-semibold rounded-lg shadow-lg hover:bg-teal-700 transition-all duration-300 block active:scale-90 active:shadow-2xl"
-        >
-          ابدأ الآن 🚀
-        </Link>
-      </section>
-
-      {/* 🔹 قسم الدعم */}
-      <section id="support" className="pt-12 pb-6 max-w-screen-md mx-auto">
-        <h2 className="text-3xl font-bold text-gray-900">طرق دعم المشروع 💡</h2>
-        <p className="mt-4 text-lg text-gray-700 leading-relaxed">
-          يمكنك دعمنا من خلال المشاركة، التبرع أو التطوع معنا. 💖
-        </p>
-
-        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 mt-6">
-          {/* دعم مالي */}
-          <div
-            className="relative p-4 md:p-6 bg-white bg-opacity-80 backdrop-blur-lg shadow-xl rounded-2xl border border-gray-200 transition-all duration-300 
-            hover:shadow-2xl hover:-translate-y-2 hover:bg-opacity-100 before:absolute before:inset-0 before:-z-10 before:bg-gradient-to-br before:from-yellow-400 before:to-orange-300 before:rounded-2xl before:opacity-20"
-          >
-            <h3 className="text-xl font-bold text-gray-900 flex items-center gap-2">
-              التبرع المالي 💰
-            </h3>
-            <p className="text-gray-700 mt-2 leading-relaxed">
-              يمكنك المساهمة ماديًا لدعم المشروع عن طريق كارت الفيزا او فودافون
-              كاش عبر:
-            </p>
-            <ul className="mt-2 text-sm sm:text-base text-teal-700">
-              <li>
-                <Link href={support_us}>📌الرابط هنا ➡️</Link>
-              </li>
-            </ul>
+      </div>
+      <div className="  grid lg:grid-cols-2 ">
+        <BlogCard
+          className="bg-blog-image2 max-lg:bg-right"
+          title="أطفالكم في خطر عظيم!"
+          description="نداء استغاثة من شاب عن واقع الأجيال الحالية"
+        />
+        <BlogCard
+          className="bg-blog-image1"
+          title="أطفئ حريق الإباحية"
+          description="دليل الشباب المبتلى عن كيفية الإقلاع عن الإباحية بإذن الله"
+        />
+      </div>
+      <div className="flex items-center justify-center py-24">
+        <button className="btn-primary">المزيد من مدونتنا</button>
+      </div>
+      <HeroSection
+        className="bg-home-hero2"
+        title="ولدك ليس استثناء، حماية منزلك لم يعد أمرا اختياريا بعد الآن"
+        description="« كُلُّكْمْ رَاعٍ، وَكُلُّكُمْ مَسْئوُلٌ عَنْ رَعِيتّهِِ... والرَّجُلُ راعٍ في أهْلِهِ وهو مَسْئُولٌ عن رَعِيَّتِهِ »"
+        button1={{
+          text: "اقرأ المزيد...",
+          href: "/blog",
+        }}
+        button2={{
+          text: "فعل الحماية",
+          href: "/gen1/setupguide",
+        }}
+      />
+      <SetupValuesComponent />
+      <HeroSection
+        className="bg-home-hero3"
+        title="اليوم مقطعٌ واحد، و غدا مدمنٌ في سن العشرين"
+        description="كلما تعرض الشخص للإباحية في صغره، كان خروجه منها أصعب و أشد!"
+        button1={{
+          text: "اقرأ المزيد...",
+          href: "/blog",
+        }}
+        button2={{
+          text: "فعل الحماية",
+          href: "/gen1/setupguide",
+        }}
+      />
+      <div className="bg-white   py-24">
+        <div className="flex flex-col items-center justify-center gap-y-[30px] max-w-5xl mx-auto px-4">
+          <h2 className="text-text font-bold text-H4 max-w-xl text-center">
+            ساهم في تطوير مستقبل أكثر أمانا للإنترنت
+          </h2>
+          <div>
+            <h5 className="text-text  text-H5">المبلغ (جنيه مصري)</h5>
+            <input
+              name="amount"
+              type="number"
+              placeholder="أدخل المبلغ هنا"
+              className="border p-4 no-arrows rounded-md mt-5 text-paragraph w-full placeholder:text-paragraph placeholder:text-grey "
+            />
           </div>
-
-          <div
-            className="relative p-6 bg-white bg-opacity-80 backdrop-blur-lg shadow-xl rounded-2xl border border-gray-200 transition-all duration-300 
-            hover:shadow-2xl hover:-translate-y-2 hover:bg-opacity-100 before:absolute before:inset-0 before:-z-10 before:bg-gradient-to-br before:from-purple-400 before:to-pink-300 before:rounded-2xl before:opacity-20"
-          >
-            <h3 className="text-xl font-bold text-gray-900 flex items-center gap-2">
-              التطوع 🤝
-            </h3>
-            <p className="text-gray-700 mt-2 leading-relaxed">
-              لديك مهارات في البرمجة أو التسويق؟ انضم إلينا وساعدنا في تحسين
-              المشروع.
-            </p>
+          <div className="flex flex-col lg:flex-row gap-10 mt-24">
+            <Link href={"/"} className="btn-primary">
+              محفظة
+            </Link>
             <Link
-              href={joinUs}
-              target="_blank"
-              className="mt-3 inline-block text-teal-900 underline hover:text-teal-600"
+              href={"/"}
+              className={cn("btn-outline", "!text-text !border-black ")}
             >
-              🚀 انضم لفريق التطوع
+              كارت
             </Link>
           </div>
         </div>
-      </section>
-
-      {/* 🔹 قسم الصفحة والقناة*/}
-      <section id="community" className="pb-12 max-w-screen-md mx-auto">
-        <h2 className="text-3xl font-bold text-gray-900">انضم لمجتمعنا 💬</h2>
-        <p className="mt-4 text-lg text-gray-700 leading-relaxed">
-          احصل على آخر التحديثات وكن جزءًا من مجتمع الحماية عبر الجروب والقناة
-        </p>
-        <div className="flex gap-4 items-center justify-center">
-          <Link
-            href={whatsappChannel}
-            target="_blank"
-            className="mt-6 inline-block px-3 md:px-6 py-3 bg-green-600 text-white text-sm md:text-lg md:font-semibold rounded-lg shadow-lg hover:bg-green-700 transition-all duration-300"
-          >
-            انضم الآن للقناة 📢
-          </Link>
-          <Link
-            href={facebookPage}
-            target="_blank"
-            className="flex gap-2 mt-6 items-center justify-between px-3 md:px-6 py-3 bg-green-600 text-white text-sm md:text-lg md:font-semibold rounded-lg shadow-lg hover:bg-green-700 transition-all duration-300"
-          >
-            تابعنا على فيسبوك <FaFacebook size={24} />
-          </Link>
-        </div>
-      </section>
-    </article>
+      </div>
+    </div>
   );
 }

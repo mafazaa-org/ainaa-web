@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        text: "#353535",
+        grey: "#7B7B7B",
+      },
       backgroundColor: {
         Red: "#E0462D",
         Red2: "#A73826",
@@ -22,20 +26,12 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
-      gradientColorStops: {
-        "dark-gradient": {
-          from: "#1C1C1C",
-          to: "#353535",
-        },
-        "red-gradient": {
-          from: "#E0462D",
-          to: "#A73826",
-        },
-        "light-gradient": {
-          from: "#FFFFFF",
-          to: "#DADADA",
-        },
+        "home-hero": "url('/home/1.webp')",
+        "home-hero2": "url('/home/2.webp')",
+        "home-hero3": "url('/home/3.webp')",
+        "blog-image1": "url('/blog/1.webp')",
+        "blog-image2": "url('/blog/2.webp')",
+        "light-gradient": "linear-gradient(to right, #FFFFFF, #DADADA)",
       },
       fontSize: {
         H1: ["50px", { fontWeight: "800" }],
@@ -56,7 +52,7 @@ const config: Config = {
 
         nav_link: ["20px", { fontWeight: "bold" }],
 
-        "very small": ["16px", { fontWeight: "regular" }],
+        "very-small": ["16px", { fontWeight: "regular" }],
       },
     },
   },

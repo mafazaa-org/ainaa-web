@@ -1,10 +1,10 @@
-import { genName } from "@/app/appTypes";
-import React from "react";
-import stepData, { Step, stepName } from "./stepData";
 import { deviceName } from "@/app/[gen]/genData";
+import DeviceCard from "@/app/_components/DeviceCard";
+import { genName } from "@/app/appTypes";
 import Image from "next/image";
 import Link from "next/link";
-import DeviceCard from "@/app/_components/DeviceCard";
+import React from "react";
+import stepData, { Step, stepName } from "./stepData";
 
 const StepPage = ({
   params,
@@ -44,7 +44,7 @@ const StepPage = ({
               <div className="w-full p-4 text-teal-700 border border-teal-300 rounded-lg bg-teal-50 shadow-md">
                 <h3 className="font-semibold">
                   {index + 1}.{" "}
-                  {step.data.split("\n").map((line, i) => (
+                  {step.data?.toString().split("\n").map((line, i) => (
                     <React.Fragment key={i}>
                       {line}
                       <br />

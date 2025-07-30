@@ -1,9 +1,7 @@
 import type { Metadata, Viewport } from "next"; // ✅ استيراد Viewport
 import { Almarai } from "next/font/google";
-import "./globals.css";
 import Header from "./_components/Header";
-import Warnning from "./_components/Warnning";
-import Modal from "./_components/Modal";
+import "./globals.css";
 
 const almarai = Almarai({
   subsets: ["arabic"],
@@ -147,7 +145,7 @@ export default function RootLayout({
       <body>
         <Header />
         {/* <Warnning /> */}
-        <main className="pt-24">{children}</main>
+        <main className="pt-20">{children}</main>
       </body>
     </html>
   );

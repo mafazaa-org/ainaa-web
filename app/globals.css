@@ -28,3 +28,31 @@ body {
   -webkit-appearance: none;
   margin: 0;
 }
+
+@layer utilities {
+  .bg-dark-gradient {
+    background: linear-gradient(180deg, #353535 0%, #1c1c1c 100%);
+    mix-blend-mode: multiply;
+    opacity: 0.75;
+  }
+  .bg-red-gradient {
+    background: linear-gradient(180deg, #e0462d 0%, #a73826 100%);
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .btn {
+    @apply text-white  px-20 rounded-[16px] font-medium  text-paragraph;
+  }
+  .btn-primary {
+    @apply btn  py-8  text-2xl  transition-colors bg-gradient-to-r from-[#E0462D] to-[#A73826];
+  }
+  .btn-outline {
+    @apply btn box-border border-[5px] h-[97px]  border-white flex items-center justify-center;
+  }
+  .container {
+    @apply max-w-5xl mx-auto px-4;
+  }
+}
+
+/* red overlay */
