@@ -1,66 +1,54 @@
-import { cn } from "@/utils";
-import Link from "next/link";
+import LinkButton from "@/app/_components/LinkButton";
+import { ArrowLeft, Shield } from "lucide-react";
+import Image from "next/image";
 
-const HeroSection = ({
-  className,
-  title,
-  description,
-  button1,
-  button2,
-}: {
-  className: string;
-  title: string;
-  description: string;
-  button1?: {
-    text: string;
-    href: string;
-  };
-  button2?: {
-    text: string;
-    href?: string;
-    handleClick?: () => void;
-  };
-}) => {
+export default function HeroSection() {
   return (
-    <div
-      className={cn(
-        `relative flex items-center justify-center bg-cover bg-center bg-no-repeat min-h-[calc(100vh-60px)] py-10`,
-        className
-      )}
-    >
-      <div className="absolute top-0 left-0 h-full w-full bg-gradient-to-b from-Red to-Red2 opacity-60 mix-blend-multiply" />
-      <div className="absolute top-0 left-0 h-full w-full bg-gradient-to-b from-Text to-dark opacity-75 mix-blend-multiply" />
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 flex flex-col items-center justify-center text-center text-white relative z-10 h-full w-full">
-        <h1 className="text-3xl md:text-4xl lg:text-H1 font-bold text-white">{title}</h1>
-        <p className="text-lg md:text-xl lg:text-paragraph mt-4">{description}</p>
-        {button1 || button2 ? (
-          <div className="flex flex-col sm:flex-row gap-6 sm:gap-10 lg:gap-20 mt-12 md:mt-16 lg:mt-24 w-full justify-center">
-            {button1 && (
-              <Link
-                href={button1.href}
-                className="w-full sm:w-auto text-center text-white px-6 sm:px-10 md:px-16 lg:px-20 py-4 sm:py-6 lg:py-8 rounded-[16px] font-medium text-lg sm:text-xl lg:text-2xl transition-colors bg-gradient-to-r from-Red to-Red2"
-              >
-                {button1.text}
-              </Link>
-            )}
-            {button2?.href && (
-              <Link
-                href={button2.href}
-                className="w-full sm:w-auto text-center text-white px-6 sm:px-10 md:px-16 lg:px-20 py-4 sm:py-6 lg:py-8 rounded-[16px] font-medium text-base sm:text-xl lg:text-paragraph border-2 sm:border-[3px] md:border-4 lg:border-[5px] border-white flex items-center justify-center"
-              >
-                {button2.text}
-              </Link>
-            )}
-            {button2?.handleClick && (
-              <button onClick={button2.handleClick} className="btn-outline">
-                {button2.text}
-              </button>
-            )}
-          </div>
-        ) : null}
-      </div>
-    </div>
-  );
-};
+    <section className="bg-gradient-to-b from-[#FCF8F7] to-[#FAEFED]">
+      <div className="flex md:flex-row flex-col justify-center items-center gap-6 bg-gradient-to-b from-[#FCF8F7] to-[#FAEFED] mx-auto mt-2 p-10 lg:p-20 max-w-screen-2xl">
+        {/* Right Side */}
+        <div className="flex flex-col gap-6 w-full md:w-1/2">
+          {/* Title */}
+          <p className="flex items-center gap-2 bg-red-100 px-4 py-3 rounded-xl w-fit font-normal text-red-500 text-sm">
+            <Shield size={16} /> <span>موثوق به من قبل أكثر من 1000 عائلة</span>
+          </p>
 
-export default HeroSection;
+          {/* Main Text */}
+          <div className="space-y-10">
+            <h1 className="font-bold text-2xl lg:text-5xl">
+              <span> حماية أطفالك من المحتوى</span> <br />
+              <span className="block text-red-500 translate-y-4">
+                الضار على الإنترنت
+              </span>
+            </h1>
+            <p className="font-normal text-gray-600 text-lg lg:text-xl">
+              منصتنا تساعدك على حظر المواقع الإباحية وتوفير بيئة إنترنت أكثر
+              أمانًا لعائلتك. تحكم بما يراه أطفالك على الإنترنت.
+            </p>
+          </div>
+
+          <LinkButton
+            link="/gen1/setupguide"
+            className="w-fit"
+            content={
+              <>
+                <p>طريقة التفعيل</p> <ArrowLeft size={20} className="mt-1" />
+              </>
+            }
+          />
+        </div>
+
+        {/* Left Side */}
+        <div>
+          <Image
+            src={"/home/1.1.svg"}
+            alt="children"
+            width={500}
+            height={430}
+            className="md:w-fit md:h-fit"
+          />
+        </div>
+      </div>
+    </section>
+  );
+}

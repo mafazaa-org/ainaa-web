@@ -11,7 +11,7 @@ function BlogPage() {
         title="اعطاء ابنك هاتفا، ضمان لتعرضه لموادٍ إباحية!"
         description="تعرف كيف يشاهد الأطفال أفلاما إباحية عن طريق كتابة حرف خاطئ على محرك البحث"
       />
-      <div className="flex flex-col gap-y-8 mt-24 max-w-5xl mx-auto px-4 ">
+      <div className="flex flex-col gap-y-8 mx-auto mt-24 px-4 max-w-5xl">
         <p className=" ">
           شرح مكتوب شرح مكتوب شرح مكتوب شرح مكتوب شرح مكتوب شرح مكتوب شرح مكتوب
           شرح مكتوب شرح مكتوب شرح مكتوب شرح مكتوب شرح مكتوب شرح مكتوب شرح مكتوب
@@ -20,7 +20,7 @@ function BlogPage() {
           شرح مكتوب شرح مكتوب شرح مكتوب شرح مكتوب شرح مكتوب شرح مكتوب شرح مكتوب
           شرح مكتوب
         </p>
-        <a className="  text-Red px-4  underline">اضغظ على الرابط</a>
+        <a className="px-4 text-Red underline">اضغظ على الرابط</a>
         <Image
           className="brightness-50"
           src="/blog/1.webp"
@@ -37,9 +37,9 @@ function BlogPage() {
           شرح مكتوب
         </p>
       </div>
-      <div className="px-5 flex flex-col gap-y-12 mt-48">
-        <h2 className="text-text font-bold text-5xl">مقالات أخرى </h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12  ">
+      <div className="flex flex-col gap-y-12 mt-48 px-5">
+        <h2 className="font-bold text-text text-5xl">مقالات أخرى </h2>
+        <div className="gap-x-6 gap-y-12 grid sm:grid-cols-2 lg:grid-cols-3">
           {Array.from({ length: 3 }).map((_, index) => (
             <BlogCard
               blogId={index.toString()}
@@ -50,24 +50,24 @@ function BlogPage() {
             />
           ))}
         </div>
-        <div className="flex justify-center   pb-16 ">
-          <button className={cn("btn-outline ", " !text-black !border-black ")}>
+        <div className="flex justify-center pb-16">
+          <button className={cn("btn-outline", " !text-black !border-black ")}>
             المزيد...
           </button>
         </div>
       </div>
-      <div className="bg-white   py-24 border-t border-dark">
-        <div className="flex flex-col items-center justify-center gap-y-[30px] max-w-5xl mx-auto px-4">
-          <h2 className="text-text font-bold text-5xl text-center">
+      <div className="bg-white py-24 border-dark border-t">
+        <div className="flex flex-col justify-center items-center gap-y-[30px] mx-auto px-4 max-w-5xl">
+          <h2 className="font-bold text-text text-5xl text-center">
             أهم مقالاتنا{" "}
           </h2>
-          <p className="text-text text-2xl font-bold text-center">
+          <p className="font-bold text-text text-2xl text-center">
             مقال توعوي للأباء و الأمهات عن ما وصلت إليه الإباحية في هذا الزمن، و
             آخر يساعد الشباب على التعافي بإذن الله
           </p>
         </div>
       </div>
-      <div className="  grid lg:grid-cols-2 ">
+      <div className="grid lg:grid-cols-2">
         <BlogCard
           isMain
           blogId="1"

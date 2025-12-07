@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next"; // ✅ استيراد Viewport
 import { Almarai } from "next/font/google";
+import Footer from "./_components/Footer";
 import Header from "./_components/Header";
 import "./globals.css";
 
@@ -14,7 +15,7 @@ const almarai = Almarai({
 export const metadata: Metadata = {
   title: "عَيْنًا سَلْسَبِيلًا - حماية إسلامية متكاملة",
   icons: {
-    icon: '/logo-small.svg'
+    icon: "/logo-small.svg",
   },
   description:
     "استخدم حماية عَيْنًا سَلْسَبِيلًا لحجب المواقع الإباحية والتيك توك والأغاني والأفلام، وتأمين الإنترنت للأطفال والعائلة بفعالية وخصوصية عالية.",
@@ -138,8 +139,6 @@ export const viewport: Viewport = {
   userScalable: false,
 };
 
-import Footer from "./_components/Footer";
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -150,7 +149,7 @@ export default function RootLayout({
       <body>
         <Header />
         {/* <Warnning /> */}
-        <main className="pt-24 min-h-[550px]">{children}</main>
+        <main className="pt-10 min-h-[550px]">{children}</main>
         <Footer />
       </body>
     </html>
