@@ -1,12 +1,12 @@
 import type { Metadata, Viewport } from "next"; // ✅ استيراد Viewport
-import { Almarai } from "next/font/google";
+import { El_Messiri } from "next/font/google";
 import Footer from "./_components/Footer";
 import Header from "./_components/Header";
 import "./globals.css";
 
-const almarai = Almarai({
+const elMessiri = El_Messiri({
   subsets: ["arabic"],
-  weight: ["300", "400", "700"],
+  weight: ["400", "700"],
   display: "swap",
   adjustFontFallback: true,
   preload: true,
@@ -145,7 +145,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ar" dir="rtl" className={almarai.className}>
+    <html lang="ar" dir="rtl" className={elMessiri.className}>
       <body>
         <Header />
         {/* <Warnning /> */}

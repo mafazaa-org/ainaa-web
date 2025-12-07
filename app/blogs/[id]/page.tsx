@@ -7,9 +7,9 @@ function BlogPage() {
   return (
     <div className="bg-white">
       <HeroSection
-        className="bg-blog-image1"
-        title="اعطاء ابنك هاتفا، ضمان لتعرضه لموادٍ إباحية!"
-        description="تعرف كيف يشاهد الأطفال أفلاما إباحية عن طريق كتابة حرف خاطئ على محرك البحث"
+      // className="bg-blog-image1"
+      // title="اعطاء ابنك هاتفا، ضمان لتعرضه لموادٍ إباحية!"
+      // description="تعرف كيف يشاهد الأطفال أفلاما إباحية عن طريق كتابة حرف خاطئ على محرك البحث"
       />
       <div className="flex flex-col gap-y-8 mx-auto mt-24 px-4 max-w-5xl">
         <p className=" ">

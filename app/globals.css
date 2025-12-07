@@ -53,6 +53,83 @@ body {
   .container {
     @apply max-w-5xl mx-auto px-4;
   }
+
+  /* Start Page Styles */
+  .start-hero-title {
+    font-size: clamp(28px, 5vw, 53px);
+    line-height: 1.563;
+    color: #1a1818;
+  }
+
+  .start-hero-description {
+    font-size: clamp(18px, 2.5vw, 22px);
+    line-height: 1.563;
+    color: #7a706f;
+  }
+
+  .start-section-title {
+    font-size: clamp(28px, 3.5vw, 34px);
+    line-height: 1.563;
+    color: #1a1818;
+  }
+
+  .start-card {
+    gap: 24px;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.22),
+      0px 0px 1px 0px rgba(0, 0, 0, 0.13), 0px 0px 1px 0px rgba(0, 0, 0, 0.04),
+      0px 0px 1px 0px rgba(0, 0, 0, 0), 0px 2px 14.4px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .start-card-icon-container {
+    width: 72px;
+    height: 72px;
+    background-color: #fef4f2;
+  }
+
+  .start-card-title {
+    font-size: clamp(22px, 2.5vw, 27px);
+    line-height: 1.563;
+    color: #0f172a;
+  }
+
+  .start-card-description {
+    font-size: 16px;
+    line-height: 1.563;
+    color: #7a706f;
+    min-height: 80px;
+  }
+
+  .start-card-button {
+    font-size: 18px;
+    line-height: 1.563;
+    font-weight: 700;
+    color: #e0462d;
+  }
+
+  .start-card-button:hover {
+    color: #ffffff;
+  }
+
+  .start-alert-box {
+    background-color: #ffedd5;
+    padding: 24px 16px;
+    gap: 8px;
+    border-radius: 8px;
+  }
+
+  .start-alert-text {
+    font-size: clamp(18px, 2.5vw, 22px);
+    line-height: 1.563;
+    color: #1a1818;
+  }
+
+  .start-support-button {
+    width: 60px;
+    height: 60px;
+    background-color: #d43820;
+  }
 }
 
 /* red overlay */
