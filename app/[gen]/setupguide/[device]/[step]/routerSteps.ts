@@ -52,15 +52,15 @@ const routerSteps: { gen1: Steps } = {
 		step3: [
 			{
 				type: "text",
-				data: "📌 ابحث يدويًا عن إعدادات الـ (Primary DNS) و (Secondary DNS) داخل صفحة الراوتر.",
+				data: "ابحث يدويًا عن إعدادات الـ (Primary DNS) و (Secondary DNS) داخل صفحة الراوتر.",
 			},
 			{
 				type: "text",
-				data: "🔍 ستجد هذه الإعدادات غالبًا داخل أحد الأقسام التالية:\n - (LAN Settings) (إعدادات الشبكة المحلية)\n - (WAN Settings) (إعدادات الإنترنت)\n - (Internet Settings) (إعدادات الاتصال بالإنترنت)\n - (DHCP Settings) (إعدادات توزيع العناوين)\n - (Network Settings) (إعدادات الشبكة)",
+				data: "ستجد هذه الإعدادات غالبًا داخل أحد الأقسام التالية:\n• (إعدادات الشبكة المحلية)(LAN Settings)\n• (إعدادات الإنترنت)(WAN Settings)\n• (إعدادات الاتصال بالإنترنت)(Internet Settings)\n• (إعدادات الشبكة)(Network Settings)\n• (إعدادات توزيع العناوين) (DHCP Settings)",
 			},
 			{
 				type: "text",
-				data: "🛠 إذا لم تتمكن من العثور عليها، تواصل مع الدعم.",
+				data: " إذا لم تتمكن من العثور عليها، تواصل مع الدعم.",
 			},
 			{
 				type: "link",
@@ -71,7 +71,7 @@ const routerSteps: { gen1: Steps } = {
 			},
 			{
 				type: "text",
-				data: "📌 (اختر مستوى الحماية المناسب لك):",
+				data: " (اختر مستوى الحماية المناسب لك):",
 			},
 			{
 				type: "text",
