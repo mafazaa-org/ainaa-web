@@ -1,8 +1,8 @@
 import setupGuideData, {
   genSetupGuideData,
 } from "@/app/[gen]/setupguide/setupGuideData";
+import OtherDevicesSection from "@/app/_components/OtherDevicesSection";
 import { CircleCheckBig, MessageSquareText, Shield } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function CongratulationsPage() {
@@ -183,65 +183,7 @@ export default function CongratulationsPage() {
         </div>
       </div>
       {/* Other Devices Section */}
-      {otherDevices.length > 0 && (
-        <section className="w-full py-10">
-          <div className="flex flex-col gap-4 max-w-[1435px] mx-auto">
-            <div
-              className="flex flex-col gap-11 p-12 lg:p-[48px_128px] rounded-2xl"
-              style={{
-                backgroundColor: "#FEE6E2",
-                boxShadow: "0px 4px 12px 0px rgba(94, 16, 3, 0.12)",
-              }}
-            >
-              {/* Title */}
-              <h3 className="font-bold text-2xl md:text-3xl text-center text-[#1A1818] leading-[1.667]">
-                تفعيل الحمايه في أجهزة أخرى؟
-              </h3>
-
-              {/* Device Cards */}
-              <div className="flex flex-col md:flex-row justify-center items-stretch gap-12">
-                {otherDevices.map((device) => (
-                  <Link
-                    key={device.device}
-                    href={`/${device.gen}/setupguide/${device.device}`}
-                    className="flex-1 flex flex-col items-center gap-6 p-6 bg-white rounded-xl max-w-[404px] mx-auto hover:shadow-lg transition-shadow"
-                  >
-                    {/* Icon */}
-                    <div className="flex items-center justify-center rounded-full flex-shrink-0 start-card-icon-container">
-                      <div className="w-12 h-12 relative">
-                        <Image
-                          src={`/devices/${device.device}.svg`}
-                          alt={device.device}
-                          fill
-                          className="object-contain"
-                        />
-                      </div>
-                    </div>
-
-                    {/* Title */}
-                    <h4 className="font-bold text-xl md:text-[25px] text-[#0F172A] leading-[1.116] text-center">
-                      {device.device === "windows"
-                        ? "الويندوز"
-                        : device.device === "android"
-                        ? "الاندرويد"
-                        : device.device}
-                    </h4>
-
-                    {/* Description */}
-                    <p className="font-normal text-base text-[#475569] leading-[1.6] text-center">
-                      {device.device === "windows"
-                        ? "خليك مطمّن على كمبيوترك. النظام يمنع المواقع الإباحية والبرمجيات الضارة في المتصفحات كلها، ويشتغل بهدوء في الخلفية بدون ما يعيق شغلك أو تصفّحك."
-                        : device.device === "android"
-                        ? "فعِّل الحماية على موبايلك. التطبيق يمنع المواقع الإباحية والضارة وبيشتغل في الخلفية بدون ما يبطئ الجهاز أو يستهلك البطارية."
-                        : ""}
-                    </p>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
+      <OtherDevicesSection devices={otherDevices} />
     </div>
   );
 }
